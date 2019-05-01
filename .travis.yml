@@ -1,0 +1,9 @@
+Sudo: required
+Services:
+  - docker
+before-install:
+  - docker build -t guptasunil2k/docker-react -f Dockerfile.dev .
+
+Scripts:
+  - docker run guptasunil2k/docker-react npm run test -- --coverage
+
