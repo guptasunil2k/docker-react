@@ -7,6 +7,6 @@ before_install:
 
 script:
   - gem install bundler
-  - docker run guptasunil2k/docker-react npm run test -- --coverage
-  - gem install bundler
+  # - docker run guptasunil2k/docker-react npm run test -- --coverage
+  # - gem install bundler
 
