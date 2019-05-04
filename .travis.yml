@@ -10,3 +10,15 @@ script:
   # - docker run guptasunil2k/docker-react npm run test -- --coverage
   # - gem install bundler
 
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "Docker-React"
+  env: "DockerReact-env"
+  bucket_name: "elasticbeanstalk-us-east-2-020612687210"
+  bucket_path: "Docker-React"
+  on:
+    branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key:
+    secure: "$AWS_Secret_Key"
